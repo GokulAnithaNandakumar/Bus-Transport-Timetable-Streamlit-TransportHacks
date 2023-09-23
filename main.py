@@ -107,7 +107,7 @@ transportation_data = {
             '10:00 PM', '11:00PM'
         ]
     },
-    
+
     'Madurai-Chennai': {
         'Stops': [
             'Madurai', 'Dindigul', 'Tiruchirappalli', 'Ariyalur', 'Perambalur', 'Thittakudi', 'Chidambaram', 'Sirkazhi',
