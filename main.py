@@ -160,16 +160,16 @@ def get_timetable(route):
     return transportation_data[route]
 
 
-# Display timetable for the selected route
+#Display timetable for route
 if selected_route:
     timetable = get_timetable(selected_route)
-    st.subheader(f'Timetable for {selected_route}')
+    st.subheader(f'Timetable - {selected_route}')
 
-    # Display stops and departure times in a table side by side
+    #Display stops and departure times in a table coulumns
     timetable_df = pd.DataFrame(timetable)
     st.table(timetable_df)
 
-# User input: Route Planning
+# User input Route Planning
 st.sidebar.subheader('Route Planning')
 
 # Create a list of all available stops
