@@ -169,16 +169,15 @@ if selected_route:
     timetable_df = pd.DataFrame(timetable)
     st.table(timetable_df)
 
-# User input Route Planning
+#User input Route Planning
 st.sidebar.subheader('Route Planning')
 
-# Create a list of all available stops
 all_stops = set()
 for route_data in transportation_data.values():
     all_stops.update(route_data['Stops'])
 
-start_stop = st.sidebar.selectbox('Select Starting Stop', sorted(all_stops), key='start')
-end_stop = st.sidebar.selectbox('Select Ending Stop', sorted(all_stops), key='end')
+start_stop = st.sidebar.selectbox('Starting Stop', sorted(all_stops), key='start')
+end_stop = st.sidebar.selectbox('Ending Stop', sorted(all_stops), key='end')
 
 if start_stop and end_stop:
     selected_stops = [start_stop, end_stop]
@@ -190,14 +189,13 @@ if start_stop and end_stop:
         if start_stop < stop < end_stop:
             st.sidebar.write(stop)
 
-# Search Functionality
+#Search Function
 search_term = st.sidebar.text_input('Search for a Stop:')
 if search_term:
-    st.sidebar.subheader('Search Results:')
+    st.sidebar.subheader('Results:')
     for route, data in transportation_data.items():
         stops = data['Stops']
         if any(search_term.lower() in stop.lower() for stop in stops):
             st.sidebar.write(f'Route: {route}')
             st.sidebar.write(f'Stops: {", ".join(stops)}')
 
-# You can add more features like real-time updates as needed.
