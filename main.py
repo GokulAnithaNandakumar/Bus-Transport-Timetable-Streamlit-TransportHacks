@@ -68,7 +68,7 @@ transportation_data = {
         ]
 
     },
-    'Vellore to Chennai': {
+    'Vellore-Chennai': {
         'Stops': ['Vellore', 'Kanchipuram', 'Chengalpattu', 'Tambaram', 'Chennai Central Bus Station'],
         'Departure Times': ['08:30 AM', '09:15 AM', '10:00 AM', '10:45 AM', '11:30 AM']
     },
@@ -107,10 +107,7 @@ transportation_data = {
             '10:00 PM', '11:00PM'
         ]
     },
-    'Madurai to Chennai': {
-        'Stops': ['Madurai', 'Stop 1', 'Stop 2', 'Stop 3', 'Stop 4', 'Stop 5'],
-        'Departure Times': ['07:00 AM', '07:45 AM', '08:30 AM', '09:15 AM', '10:00 AM', '10:45 AM']
-    },
+    
     'Madurai-Chennai': {
         'Stops': [
             'Madurai', 'Dindigul', 'Tiruchirappalli', 'Ariyalur', 'Perambalur', 'Thittakudi', 'Chidambaram', 'Sirkazhi',
