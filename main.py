@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# Sample data representing routes, stops, and departure times
+#Transportation data can add many routes
 transportation_data = {
     'Chennai-Bangalore': {
         'Stops': [
@@ -52,7 +52,7 @@ transportation_data = {
             'Chennai Central Bus Station'
         ],
         'Departure Times': [
-            '08:00 PM',  # New departure time for the route
+            '08:00 PM',
             '08:30 PM',
             '09:15 PM',
             '10:00 PM',
@@ -142,20 +142,20 @@ transportation_data = {
         ]
     },
 
-    'Route C': {
-        'Stops': ['Stop 1', 'Stop 3', 'Stop 5'],
-        'Departure Times': ['08:10 AM', '08:40 AM', '09:10 AM']
+    'Route': {
+        'Stops': ['Stop 1', 'Stop 3', 'Stop 5','...'],
+        'Departure Times': ['08:10 AM', '08:40 AM', '09:10 AM','...']
     }
 }
 
-# Streamlit app
+
 st.title('Intercity Transportation Timetable')
 
-# User input: Choose a route
+#User input
 selected_route = st.selectbox('Select a Route', list(transportation_data.keys()))
 
 
-# Function to retrieve timetable data for the selected route
+#retrieve timetable data for the route
 def get_timetable(route):
     return transportation_data[route]
 
